@@ -1,0 +1,31 @@
+version: '3.9'
+volumes:
+  pgdata:
+networks:
+  pgnet:
+services:
+  pg-server:
+    image: postgres:latest
+    restart: unless-stopped
+    networks:
+      - pgnet
+    ports:
+      - 9616:5432 #PG ile haşır neşirsen zaten 5432 ya doludur ya da bi'gün lazım olur...
+    volumes:
+      - ./pagila/pagila-schema.sql:/docker-entrypoint-initdb.d/1-pagila-schema.sql
+      - ./pagila/pagila-data.sql:/docker-entrypoint-initdb.d/2-pagila-data.sql
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+  coder:
+    build:
+      dockerfile: ./coder/Dockerfile
+    restart: unless-stopped
+    networks:
+      - pgnet
+    ports:
+      - 9615:8080
+    volumes:
+      - ./coder/config.yaml:/home/coder/.config/code-server/config.yaml
+      - ./project:/home/coder/project
+    command: /home/coder/project/project.code-workspace

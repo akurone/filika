@@ -1,0 +1,6 @@
+bind-addr: 127.0.0.1:9615
+auth: password
+password: postgres
+cert: false
+disable-workspace-trust: true
+disable-getting-started-override: true

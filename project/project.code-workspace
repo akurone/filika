@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "./A_serverProg",
+			"name": "Programlama Konuları"
+		}
+	],
+	"settings": {
+       "workbench.editorAssociations": {
+        "*.sql":"sql-notebook"
+	},
+	"notebook.lineNumbers": "on",
+	"breadcrumbs.enabled": false,
+	"editor.unicodeHighlight.allowedLocales": {
+		"tr": true
+	}
+    }
+}
