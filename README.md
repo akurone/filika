@@ -18,6 +18,7 @@ sadece [Docker](https://docker.com/) ve (modern) bir tarayıcı ile [Notebook](h
    |DB User|postgres|
    |DB Password||detayı aşağıda yazıyor|
    |DB Name|postgres|
+   
    ![_](./pics/newConn.png)
 1. bağlantıyı aktif edin: (sorun yoksa _Connected_ ifadesi belirir, bunu görmeden paçaları sıvamayın!)
    ![_](./pics/connect.png)
