@@ -22,7 +22,8 @@ sadece [Docker](https://docker.com/) ve (modern) bir tarayıcı ile [Notebook](h
    ![_](./pics/newConn.png)
 1. bağlantıyı aktif edin: (sorun yoksa _Connected_ ifadesi belirir, bunu görmeden paçaları sıvamayın!)
    ![_](./pics/connect.png)
-1. _Explorer_'daki dosyaları kurcaklamaya başlayın:
+1. _Explorer_'daki dosyaları kurcaklamaya başlayın (sırayla gitmekte fayda var):
+
    ![_](./pics/file.png)
 
 ## bunları bilsen iyi olur
